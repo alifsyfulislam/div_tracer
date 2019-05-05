@@ -243,8 +243,16 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    var low = parseFloat((position.coords.latitude).toFixed(2));
-    var high = parseFloat((position.coords.longitude).toFixed(2));
+    var low = Number((position.coords.latitude).toFixed(2));
+    var high = Number((position.coords.longitude).toFixed(2));
+
+
+    // low = 24.21;
+    // high = 88.74;
+    //
+    //
+    // console.log(typeof (low));
+    // console.log(typeof (high));
     if (low >= 23.60 && low<23.90 && high >= 90.30 && high<90.60){
         divisionStatus = division.innerText = "dhk";
 
