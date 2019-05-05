@@ -243,33 +243,35 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    var low = (position.coords.latitude).toFixed(2);
-    var high = (position.coords.longitude).toFixed(2);
-    if (low >= "23.60" && low<"23.90" && high >= "90.30" && high<"90.60"){
+    var low = parseFloat((position.coords.latitude).toFixed(2));
+    var high = parseFloat((position.coords.longitude).toFixed(2));
+    console.log(low);
+    console.log(high);
+    if (low >= 23.60 && low<23.90 && high >= 90.30 && high<90.60){
         divisionStatus = division.innerText = "dhk";
 
     }
-    else if (low >= "22.15" && low<"22.45" && high >= "91.65" && high<"91.95") {
+    else if (low >= 22.15 && low<22.45 && high >= 91.65 && high<91.95) {
         divisionStatus = division.innerText = "ctg";
     }
 
-    else if (low >= "22.65" && low<"22.95" && high >= "89.40" && high<"89.70") {
+    else if (low >= 22.65 && low<22.95 && high >= 89.40 && high<89.70) {
         divisionStatus = division.innerText = "khu";
     }
 
-    else if (low >= "24.20" && low<"24.50" && high >= "88.45" && high<"88.75") {
+    else if (low >= 24.20 && low<24.50 && high >= 88.45 && high<88.75) {
         divisionStatus = division.innerText = "raj";
     }
 
-    else if (low >= "24.70" && low<"24.99" && high >= "91.70" && high<"91.99") {
+    else if (low >= 24.70 && low<24.99 && high >= 91.70 && high<91.99) {
         divisionStatus = division.innerText = "sly";
     }
 
-    else if (low >= "22.50" && low<"22.80" && high >= "90.20" && high<"90.50") {
+    else if (low >= 22.50 && low<22.80 && high >= 90.20 && high<90.50) {
         divisionStatus = idivision.innerText = "bar";
     }
 
-    else if (low >= "25.60" && low<"25.90" && high >= "89.10" && high<"89.40") {
+    else if (low >= 25.60 && low<25.90 && high >= 89.10 && high<89.40) {
         divisionStatus = division.innerText = "ran";
     }
 
