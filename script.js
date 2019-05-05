@@ -245,8 +245,6 @@ function getLocation() {
 function showPosition(position) {
     var low = parseFloat((position.coords.latitude).toFixed(2));
     var high = parseFloat((position.coords.longitude).toFixed(2));
-    console.log(low);
-    console.log(high);
     if (low >= 23.60 && low<23.90 && high >= 90.30 && high<90.60){
         divisionStatus = division.innerText = "dhk";
 
@@ -395,57 +393,51 @@ function divisionDifference(diff) {
         return time;
     }
 
-    else if (divisionStatus == "ctg"){
+    if (divisionStatus == "ctg"){
         document.getElementById('sub').innerHTML = "চট্রগ্রাম বিভাগ";
         time = time + 300;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "myn"){
+     if (divisionStatus == "myn"){
         document.getElementById('sub').innerHTML = "ময়মনসিংহ বিভাগ";
         time = time + 120;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "raj"){
+    if (divisionStatus == "raj"){
         document.getElementById('sub').innerHTML = "রাজশাহী বিভাগ";
         time = time + 420;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "sly"){
+    if (divisionStatus == "sly"){
         document.getElementById('sub').innerHTML = "সিলেট বিভাগ";
         time = time + 300;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "ran"){
+    if (divisionStatus == "ran"){
         document.getElementById('sub').innerHTML = "রংপুর বিভাগ";
         time = time + 360;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "bar"){
+    if (divisionStatus == "bar"){
         document.getElementById('sub').innerHTML = "বরিশাল বিভাগ";
         time = time + 60;
         console.log(time);
         return time;
     }
 
-    else if (divisionStatus == "khu"){
+    if (divisionStatus == "khu"){
         document.getElementById('sub').innerHTML = "খুলনা বিভাগ";
         time = time + 180;
-        console.log(time);
-        return time;
-    }
-
-    else{
-        document.getElementById('sub').innerHTML = "ঢাকা বিভাগ";
         console.log(time);
         return time;
     }
